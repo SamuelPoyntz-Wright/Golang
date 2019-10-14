@@ -22,3 +22,10 @@ x, power := 9000, 9001
 fmt.Printf("It's also %d%d", x, power)
 }
 ```
+
+### Short hand for func parameter declaration when parameters are of same type)
+```
+func simultaneousEq(a,b,c int, x,d int) int {
+  return 4
+}
+```
