@@ -29,3 +29,5 @@ func simultaneousEq(a,b,c int, x,d int) int {
   return 4
 }
 ```
+
+Code (languages): Trailing and the opposite?
