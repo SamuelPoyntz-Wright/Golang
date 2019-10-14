@@ -3,7 +3,7 @@ Questions To Answer:
 - fmt.Println VS fmt.Printf
 
 
-:= Opperator can be used to declare and assign multiple variables.
+__:=__ Opperator can be used to declare and assign multiple variables.
 It can also be used to just asign a new value to existing variables as long as it is declaring one new variable (see code below):
 ```
 package main
@@ -17,7 +17,7 @@ func main() {
 power := 9000
 fmt.Printf("It's over %d\n", power)
 
-//CAN "Redeclare" variable, if youj are declaring a 1 new variable, then the rest are considered to just have their values change
+//CAN "Redeclare" variable, if you are declaring a 1 new variable, then the rest are considered to just have their values change
 x, power := 9000, 9001
 fmt.Printf("It's also %d%d", x, power)
 }
