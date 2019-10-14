@@ -3,7 +3,7 @@ Questions To Answer:
 - fmt.Println VS fmt.Printf
 
 
-__:=__Opperator can be used to declare and assign multiple variables.
+__:=__ Opperator can be used to declare and assign multiple variables.
 It can also be used to just asign a new value to existing variables as long as it is declaring one new variable (see code below):
 ```
 package main
