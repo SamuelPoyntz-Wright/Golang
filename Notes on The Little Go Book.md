@@ -279,3 +279,9 @@ func main() {
   fmt.Println(sliceNArray4)
 }
 ```
+```
+var names := []string
+identifiers := []string{"ford", "jake", "Spain"}
+tally := make([]int, 10)
+score := make([]int, 6, 10)
+```
