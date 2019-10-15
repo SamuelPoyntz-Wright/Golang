@@ -337,3 +337,69 @@ func main() {
 //Returns INDEX of first space character after position 5 in string "stringName"
 strings.Index(stringName[5:], " ")
 ```
+### Maps
+Maps use __make()__ aswell.  
+```go
+Library := make(map[string]int) //empty map
+
+Library2 := map[string]*int{    //Mapp with key-value pairs to start
+  "Bible": 3,
+  "Dickens": 2,
+  "Famous Five": 1,
+}
+```
+#### Maps in structures
+```go
+type People struct {
+  Address string
+}
+
+type Saiyan struct {
+  Name string
+   Friends map[string]*People
+}
+
+//Initialise VERSION 1
+goku := &Saiyan {
+  Name: "Goku",
+  Friends: make(map[string]*People),
+}
+goku.Friends["Mike"] = "24 Crescent Drive, Apple Guild Lane, Funky Town"
+```
+```go
+//Initialise VERSION 2
+package main
+
+import (
+  "fmt"
+)
+
+
+func main() {
+
+type People struct {
+  Address string
+}
+
+type Saiyan struct {
+  Name string
+  Friends map[string]*People
+}
+
+
+
+goku := &Saiyan {
+  Name: "Goku",
+  Friends: map[string]*People{"Mike": &People{"24 Crescent Drive, Apple Guild Lane, Funky Town"}},
+}
+
+
+fmt.Println(goku.Name)
+fmt.Println(goku.Friends["Mike"])
+fmt.Println(goku.Friends)
+}
+```
+__Output:__  
+Goku
+&{24 Crescent Drive, Apple Guild Lane, Funky Town}
+map[Mike:0x40c138]
