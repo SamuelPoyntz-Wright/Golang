@@ -5,7 +5,7 @@ Questions To Answer:
 
 __:=__ Opperator can be used to declare and assign multiple variables.
 It can also be used to just asign a new value to existing variables as long as it is declaring one new variable (see code below):
-```
+```go
 package main
 import (
  "fmt"
@@ -24,13 +24,13 @@ fmt.Printf("It's also %d%d", x, power)
 ```
 
 ### Short hand for func parameter declaration when parameters are of same type)
-```
+```go
 func simultaneousEq(a,b,c int, x,d int) int {
   return 4
 }
 ```
 Functions:
-```
+```go
 func logTests(inputNums int) {
   //retuns nothing
 }
@@ -49,7 +49,7 @@ func kamehamehaStrength(name string) (int, bool) {
 ```
 #### Pass by value is defualt
 To pass by Reference we need to get the value of the pointer and we need out func paramer to expect a pointer __(of the correct data type)__
-```
+```go
 goku := &Saiyan{"Goku", 9000} // &  used to get pointer value
 
 func Super(s *Saiyan) {   //  *   used to expect a pointer   of data type Saiyan
@@ -58,7 +58,7 @@ func Super(s *Saiyan) {   //  *   used to expect a pointer   of data type Saiyan
 ```
 \
 Many funcs return multiple values and you may often not want to use all of them at once.
-```
+```go
 func kamehamehaStrength(name string) (int, bool) {
   //Returns two values
   
@@ -69,7 +69,7 @@ _ , canCellKamehameha = kamehamehaStrength("Cell")
 ```
 \
 ### Defining a Struct (basics e.g. no methods):
-```
+```go
 type Saiyan struct {
   Name string
   Power int
@@ -78,30 +78,30 @@ type Saiyan struct {
 \
 \
 Code (languages): Trailing and the opposite? - "Trailing __Commas__ " -> commas after each atribute in a structure Instantiation INCLUDING THE LAST ONE:
-```
+```go
 goku := Saiyan{
   Name: "Goku",
   Power: 9000,
 }
 ```
-```
+```go
 goku := Saiyan{}
 ```
-```
+```go
 goku := Saiyan{}
 goku.Name = "Goku"
 goku.Power = 9001
 ```
-```
+```go
 goku := Saiyan{Name: "Goku"}
 goku.Power = 9001
 ```
-```
+```go
 //Only use with structs that hve FEW attributes, to preserve clarity.
 goku := Saiyan{"Goku",9001}
 ```
 #### Add METHODS
-```
+```go
 type Saiyan struct {
   Name string
   Power int
@@ -113,14 +113,14 @@ func (s *Saiyan) Super () {
 ```
 \
 Calling a Struct's method
-```
+```go
 goku := &Saiyan("Goku", 9001}
 goku.Super()
 ```
 Use pointer - so the method actully affects __goku__'s attributes. (Pass ByRef)
 \
 #### Constructors
-```
+```go
 func newSaiyan(name string, power int) *Saiyan {  //Return ByRef
   return &Saiyan{
     Name: name,
@@ -140,11 +140,11 @@ func newSaiyan(name string, power int) Saiyan {  //Return ByRef
 ##### instantiating With "New"
 __new()__
 Using new() creates a ByRefer  (a pointer value) to an empty (default value) instance of the structure.
-```
+```go
 goku := new(Saiyan)
 goku := &Saiyan{}
 ```
-```
+```go
 goku := new(Saiyan)
 goku.Name = "Goku"
 goku.Power = 9001
@@ -156,7 +156,7 @@ goku := &Saiyan {
 ```
 #### Can "overwrite"
 It's not technically overwriting. You create a method (func) of the same name associated with the newly composed struct.
-```
+```go
 type Person struct {
   Name string
 }
@@ -185,7 +185,7 @@ func main() {
 
 ```
 ### Arrays
-```
+```go
 func main() {
   scores := [5]int{9001,9004,500,3,7000} // Array of ints
   
@@ -210,7 +210,7 @@ __append__(slice, value) to the end of the __length__ of a slice.
 Also, append returns a new value to point to a new array if the previous aray becomes full.
 Go uses a 2x aray growth algorith (everytime you need to increase array size, doubole it).
 Normal (when the underlying aray doesn't need to be copied into a larger one) append just returns a pointer (or the slice of the arry) for the origonalarray.
-```
+```go
 sliceScores := []int{1,2,3,4}
 sliceScores2 := make([]int, 4)
 sliceScores3 := make([]int, 2, 4) //length 2 (which is three positions) Capacity of 4 (which means there ae a max of 4 positions)
@@ -225,7 +225,7 @@ for _, value := range sliceScores{
 }
 fmt.Println(newSlice)
 ```
-```
+```go
 //Appending
 
 
@@ -279,7 +279,9 @@ func main() {
   fmt.Println(sliceNArray4)
 }
 ```
-```
+\
+Defining slices
+```go
 var names := []string
 identifiers := []string{"ford", "jake", "Spain"}
 tally := make([]int, 10)
