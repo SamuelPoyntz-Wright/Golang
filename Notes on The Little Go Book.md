@@ -30,4 +30,12 @@ func simultaneousEq(a,b,c int, x,d int) int {
 }
 ```
 
-Code (languages): Trailing and the opposite?
+Code (languages): Trailing and the opposite? - "Trailing __Commas__ " -> commas after each atribute in a structure INCLUDING THE LAST ONE:
+```
+goku := Saiyan{
+  Name: "Goku",
+  Power: 9000,
+}
+```
+
+
