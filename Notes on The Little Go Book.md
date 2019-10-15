@@ -58,8 +58,17 @@ func kamehamehaStrength(name string) (int, bool) {
 
 _ , canCellKamehameha = kamehamehaStrength("Cell")
 ```
-
-Code (languages): Trailing and the opposite? - "Trailing __Commas__ " -> commas after each atribute in a structure INCLUDING THE LAST ONE:
+\
+Defining a Struct (basics e.g. no methods):
+```
+type Saiyan struct {
+  Name string
+  Power int
+}
+```
+\
+\
+Code (languages): Trailing and the opposite? - "Trailing __Commas__ " -> commas after each atribute in a structure Instantiation INCLUDING THE LAST ONE:
 ```
 goku := Saiyan{
   Name: "Goku",
