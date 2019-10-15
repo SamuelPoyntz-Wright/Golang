@@ -137,3 +137,20 @@ func newSaiyan(name string, power int) Saiyan {  //Return ByRef
 }
 
 ```
+##### instantiating With "New"
+__new()__
+Using new() creates a ByRefer  (a pointer value) to an empty (default value) instance of the structure.
+```
+goku := new(Saiyan)
+goku := &Saiyan{}
+```
+```
+goku := new(Saiyan)
+goku.Name = "Goku"
+goku.Power = 9001
+
+goku := &Saiyan {
+  Name: "Goku",
+  Power: 9001,
+}
+```
