@@ -100,4 +100,21 @@ goku.Power = 9001
 //Only use with structs that hve FEW attributes, to preserve clarity.
 goku := Saiyan{"Goku",9001}
 ```
+#### Add METHODS
+```
+type Saiyan struct {
+  Name string
+  Power int
+}
 
+func (s *Saiyan) Super () {
+  s.Power += 10000
+}
+```
+\
+Calling a Struct's method
+```
+goku := &Saiyan("Goku", 9001}
+goku.Super()
+```
+Use pointer - so the method actully affects __goku__'s attributes. (Pass ByRef)
