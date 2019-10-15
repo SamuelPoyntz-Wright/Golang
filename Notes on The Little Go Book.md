@@ -47,6 +47,15 @@ func kamehamehaStrength(name string) (int, bool) {
   return 9000, True
 }
 ```
+#### Pass by value is defualt
+To pass by Reference we need to get the value of the pointer and we need out func paramer to expect a pointer __(of the correct data type)__
+```
+goku := &Saiyan{"Goku", 9000} // &  used to get pointer value
+
+func Super(s *Saiyan) {   //  *   used to expect a pointer   of data type Saiyan
+  s.Power += 10000
+}
+```
 \
 Many funcs return multiple values and you may often not want to use all of them at once.
 ```
