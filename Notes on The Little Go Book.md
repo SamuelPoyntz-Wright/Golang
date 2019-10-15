@@ -396,10 +396,12 @@ goku := &Saiyan {
 
 fmt.Println(goku.Name)
 fmt.Println(goku.Friends["Mike"])
+fmt.Println(goku.Friends["Mike"].Address)
 fmt.Println(goku.Friends)
 }
 ```
 __Output:__  
 Goku  
 &{24 Crescent Drive, Apple Guild Lane, Funky Town}  
+24 Crescent Drive, Apple Guild Lane, Funky Town  
 map[Mike:0x40c138]  
