@@ -184,3 +184,21 @@ func main() {
 }
 
 ```
+### Arrays
+```
+func main() {
+  scores := [5]int{9001,9004,500,3,7000} // Array of ints
+  
+  for index, value := range scores {
+    fmt.Printf("%d and %d\n", index, value)
+  }
+  
+  
+  
+  text := [5]string{"Hello","World","Little","Lamb","TEST"} // Array of strings
+  
+  for index, value := range text {
+    fmt.Printf("%d and %s\n", index, value)
+  }
+}
+```
