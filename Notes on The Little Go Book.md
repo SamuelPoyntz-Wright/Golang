@@ -240,7 +240,14 @@ func main() {
   example44Slice := make([]int, 1)
   fmt.Println(example44Slice )
   example44Slice = append(example44Slice , 5)
-  fmt.Println(example44Slice )    
+  fmt.Println(example44Slice )  
+
+  example44Slice = append(example44Slice , 7)
+  example44Slice  =example44Slice [0:4]
+  fmt.Println(example44Slice )  
+
+  example44Slice = append(example44Slice , 99)
+  fmt.Println(example44Slice )
 
   scoreSlice := make([]int, 1, 10)
   scoreSlice = append(scoreSlice, 5)
