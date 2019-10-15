@@ -154,3 +154,33 @@ goku := &Saiyan {
   Power: 9001,
 }
 ```
+#### Can "overwrite"
+It's not technically overwriting. You create a method (func) of the same name associated with the newly composed struct.
+```
+type Person struct {
+  Name string
+}
+func (p *Person) Introduce() {
+  fmt.Printf("Hi im %s.", p.Name)
+}
+
+type Saiyan struct {
+  *Person
+  Power int
+}
+
+func (s *Saiyan) Introduce() {
+  fmt.Printf("I am %s!", s.Name)
+}
+
+
+func main() {
+  goku := Saiyan{
+    Person: &Person{"Goku"},
+    Power: 9001,
+  }
+  goku.Introduce()
+  goku.Person.Introduce()
+}
+
+```
