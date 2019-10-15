@@ -75,5 +75,20 @@ goku := Saiyan{
   Power: 9000,
 }
 ```
-
+```
+goku := Saiyan{}
+```
+```
+goku := Saiyan{}
+goku.Name = "Goku"
+goku.Power = 9001
+```
+```
+goku := Saiyan{Name: "Goku"}
+goku.Power = 9001
+```
+```
+//Only use with structs that hve FEW attributes, to preserve clarity.
+goku := Saiyan{"Goku",9001}
+```
 
