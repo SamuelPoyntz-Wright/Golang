@@ -202,3 +202,48 @@ func main() {
   }
 }
 ```
+#### Slices
+Slices  (similar to the slices in python) refer to a segemnt of a hidden array.
+__Length__ the length of the slice. len(testArray) -> int
+__Capacity__ the length of the hidden array. cap(testslice) -> int
+__append__(slice, value) to the end of the __length__ of a slice.
+Also, append returns a new value to point to a new array if the previous aray becomes full.
+Go uses a 2x aray growth algorith (everytime you need to increase array size, doubole it).
+Normal (when the underlying aray doesn't need to be copied into a larger one) append just returns a pointer (or the slice of the arry) for the origonalarray.
+```
+func main() {
+  exampleSlice := make([]int, 0, 10)
+  exampleSlice = append(exampleSlice , 5)
+  fmt.Println(exampleSlice )
+
+
+  scoreSlice := make([]int, 1, 10)
+  scoreSlice = append(scoreSlice, 5)
+  fmt.Println(scoreSlice)
+
+
+  sliceNArray:= make([]int, 0, 0)
+  sliceNArray = append(sliceNArray, 5)
+  fmt.Println(sliceNArray)
+
+  sliceNArray3:= make([]int, 0, 0)
+  sliceNArray3 = append(sliceNArray3, 5)
+  sliceNArray3 = append(sliceNArray3, 6)
+  fmt.Println(sliceNArray3)
+
+
+  sliceNArray2:= make([]int, 0, 3)
+  sliceNArray2 = append(sliceNArray2, 5)
+  fmt.Println(sliceNArray2)
+  sliceNArray2 = append(sliceNArray2, 6)
+  fmt.Println(sliceNArray2)
+
+
+  sliceNArray4:= make([]int, 3, 10)
+  fmt.Println(sliceNArray4)
+  sliceNArray4 = append(sliceNArray4, 5)
+  fmt.Println(sliceNArray4)
+  sliceNArray4 = append(sliceNArray4, 6)
+  fmt.Println(sliceNArray4)
+}
+```
