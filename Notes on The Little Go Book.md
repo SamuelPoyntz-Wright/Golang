@@ -211,14 +211,36 @@ Also, append returns a new value to point to a new array if the previous aray be
 Go uses a 2x aray growth algorith (everytime you need to increase array size, doubole it).
 Normal (when the underlying aray doesn't need to be copied into a larger one) append just returns a pointer (or the slice of the arry) for the origonalarray.
 ```
+sliceScores := []int{1,2,3,4}
+sliceScores2 := make([]int, 4)
+sliceScores3 := make([]int, 2, 4) //length 2 (which is three positions) Capacity of 4 (which means there ae a max of 4 positions)
+
+newSlice := make ([]int, 0, 10)
+newSlice = append(newSlice, 9000)
+fmt.Println(newSlice)
+newSlice = newSlice[0:7]
+fmt.Println(newSlice)
+for _, value := range sliceScores{
+  newSlice = append(newSlice, value)
+}
+fmt.Println(newSlice)
+```
+```
 //Appending
 
 
+
 func main() {
-  exampleSlice := make([]int, 0, 10)
+  exampleSlice := make([]int, 0)
+  fmt.Println(exampleSlice )
   exampleSlice = append(exampleSlice , 5)
   fmt.Println(exampleSlice )
 
+
+  example44Slice := make([]int, 1)
+  fmt.Println(example44Slice )
+  example44Slice = append(example44Slice , 5)
+  fmt.Println(example44Slice )    
 
   scoreSlice := make([]int, 1, 10)
   scoreSlice = append(scoreSlice, 5)
@@ -249,19 +271,4 @@ func main() {
   sliceNArray4 = append(sliceNArray4, 6)
   fmt.Println(sliceNArray4)
 }
-```
-```
-sliceScores := []int{1,2,3,4}
-sliceScores2 := make([]int, 4)
-sliceScores3 := make([]int, 2, 4) //length 2 (which is three positions) Capacity of 4 (which means there ae a max of 4 positions)
-
-newSlice := make ([]int, 0, 10)
-newSlice = append(newSlice, 9000)
-fmt.Println(newSlice)
-newSlice = newSlice[0:7]
-fmt.Println(newSlice)
-for _, value := range sliceScores{
-  newSlice = append(newSlice, value)
-}
-fmt.Println(newSlice)
 ```
