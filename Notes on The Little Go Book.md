@@ -400,6 +400,6 @@ fmt.Println(goku.Friends)
 }
 ```
 __Output:__  
-Goku
-&{24 Crescent Drive, Apple Guild Lane, Funky Town}
-map[Mike:0x40c138]
+Goku  
+&{24 Crescent Drive, Apple Guild Lane, Funky Town}  
+map[Mike:0x40c138]  
