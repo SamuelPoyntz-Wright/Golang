@@ -59,7 +59,7 @@ func kamehamehaStrength(name string) (int, bool) {
 _ , canCellKamehameha = kamehamehaStrength("Cell")
 ```
 \
-Defining a Struct (basics e.g. no methods):
+### Defining a Struct (basics e.g. no methods):
 ```
 type Saiyan struct {
   Name string
