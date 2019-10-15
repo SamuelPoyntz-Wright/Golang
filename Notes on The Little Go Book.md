@@ -118,3 +118,22 @@ goku := &Saiyan("Goku", 9001}
 goku.Super()
 ```
 Use pointer - so the method actully affects __goku__'s attributes. (Pass ByRef)
+\
+#### Constructors
+```
+func newSaiyan(name string, power int) *Saiyan {  //Return ByRef
+  return &Saiyan{
+    Name: name,
+    Power: power,
+  }
+}
+
+//Return ByVal
+func newSaiyan(name string, power int) Saiyan {  //Return ByRef
+  return Saiyan{
+    Name: name,
+    Power: power,
+  }
+}
+
+```
