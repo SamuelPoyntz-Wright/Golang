@@ -170,7 +170,7 @@ type Saiyan struct {
 }
 
 func (s *Saiyan) Introduce() {
-  fmt.Printf("I am %s!", s.Name)
+  fmt.Printf("I am %s!\n", s.Name)
 }
 
 
