@@ -289,7 +289,7 @@ score := make([]int, 6, 10)
 ```
 ##### Slices refer to arrays (slices are wrappers)
 A slice of a slice -> the new slice referes to the same array as the previous slice.
-```
+```go
 func main() {
   nums := []int{34,6,89,44,180}
   newSlice := nums[2:4]
@@ -300,4 +300,32 @@ func main() {
 ```
 Output  
 (999, 44)  
-(34, 6, 999, 44, 180)  
+(34, 6, 999, 44, 180)
+  
+##### Copy function (inbuilt)
+```go
+func main() {
+  nums := make([]int, 100)
+  for i := 0; i < 100; i++ {
+    nums[i] = int(rand.Int31n(1000))
+  }
+  sort.Ints(nums)
+  worst := make([]int, 5)
+  avg := make([]int, 5)
+  best := make([]int, 5)
+
+  copy(worst, nums[:5])
+  copy(avg, nums[54:59])
+  copy(best, nums[95:])
+
+  fmt.Println(worst)
+  fmt.Println(avg)
+  fmt.Println(best)
+}
+```
+  
+### Strings
+```go
+//Returns INDEX of first space character after position 5 in string "stringName"
+strings.Index(stringName[5:], " ")
+```
