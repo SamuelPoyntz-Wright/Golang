@@ -287,3 +287,17 @@ identifiers := []string{"ford", "jake", "Spain"}
 tally := make([]int, 10)
 score := make([]int, 6, 10)
 ```
+##### Slices refer to arrays (slices are wrappers)
+A slice of a slice -> the new slice referes to the same array as the previous slice.
+```
+func main() {
+  nums := []int{34,6,89,44,180}
+  newSlice := nums[2:4]
+  newSlice [0] = 999
+  fmt.Println(newSlice)
+  fmt.Println(nums)
+}
+```
+Output
+(999, 44)
+(34, 6, 999, 44, 180)
