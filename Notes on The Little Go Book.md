@@ -29,6 +29,35 @@ func simultaneousEq(a,b,c int, x,d int) int {
   return 4
 }
 ```
+Functions:
+```
+func logTests(inputNums int) {
+  //retuns nothing
+}
+
+func add(a int, b, int) int {
+  //returns int
+  
+  return a + b
+}
+
+func kamehamehaStrength(name string) (int, bool) {
+  //Returns two values
+  
+  return 9000, True
+}
+```
+
+Many funcs return multiple values and you may often not want to use all of them at once.
+```
+func kamehamehaStrength(name string) (int, bool) {
+  //Returns two values
+  
+  return 9000, True
+}
+
+_ , canCellKamehameha = kamehamehaStrength("Cell")
+```
 
 Code (languages): Trailing and the opposite? - "Trailing __Commas__ " -> commas after each atribute in a structure INCLUDING THE LAST ONE:
 ```
