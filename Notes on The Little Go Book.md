@@ -119,14 +119,14 @@ goku.Super()
 ```
 Use pointer - so the method actully affects __goku__'s attributes. (Pass ByRef)
 \
-### Composition
-Creating new classes which use other classes as attributes.
-The football team class uses 11 instances of the football player class.
-ArsenalPlayer11.Name -> Mike
-ArsenalPlayer11.Position -> Midfeilder
-ArsenalPlayer11.Player.Position -> \[Midfeilder, Defender]
+#### Composition
+Creating new classes which use other classes as attributes.  
+The football team class uses 11 instances of the football player class.  
+ArsenalPlayer11.Name -> Mike  
+ArsenalPlayer11.Position -> Midfeilder  
+ArsenalPlayer11.Player.Position -> \[Midfeilder, Defender]  
 
-The position of a plyer is overloaded in the team class as for the team (with this combo of players) they fit best by far as a midfeilder, but their name isn't overloaded as that stays the same.
+The position of a plyer is overloaded in the team class as for the team (with this combo of players) they fit best by far as a midfeilder, but their name isn't overloaded as that stays the same.  
 A player can play different positions, but when they are in a team a player's positions maybe limmited.
 ```go
 type Person struct {
