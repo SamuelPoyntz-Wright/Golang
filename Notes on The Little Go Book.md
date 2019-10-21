@@ -119,6 +119,37 @@ goku.Super()
 ```
 Use pointer - so the method actully affects __goku__'s attributes. (Pass ByRef)
 \
+#### Composition
+Creating new classes which use other classes as attributes.
+The football team class uses 11 instances of the football player class.
+ArsenalPlayer11.Name -> Mike
+ArsenalPlayer11.Position -> Midfeilder
+ArsenalPlayer11.Player.Position -> \[Midfeilder, Defender]
+
+The position of a plyer is overloaded in the team class as for the team (with this combo of players) they fit best by far as a midfeilder, but their name isn't overloaded as that stays the same.
+A player can play different positions, but when they are in a team a player's positions maybe limmited.
+```go
+type Person struct {
+ Name string
+}
+func (p *Person) Introduce() {
+  fmt.Printf("Hi, I'm %s\n", p.Name)
+}
+
+type Saiyan struct {
+  *Person
+   Power int
+}
+
+
+//Using it
+goku := &Saiyan{
+  Person: &Person{"Goku"},
+  Power: 9001,
+}
+goku.Introduce()
+```
+
 #### Constructors
 ```go
 func newSaiyan(name string, power int) *Saiyan {  //Return ByRef
@@ -154,8 +185,8 @@ goku := &Saiyan {
   Power: 9001,
 }
 ```
-#### Can "overwrite"
-It's not technically overwriting. You create a method (func) of the same name associated with the newly composed struct.
+#### Can "overload"
+It's not technically overloading. You create a method (func) of the same name associated with the newly composed struct.
 ```go
 type Person struct {
   Name string
