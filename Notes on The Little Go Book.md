@@ -119,7 +119,7 @@ goku.Super()
 ```
 Use pointer - so the method actully affects __goku__'s attributes. (Pass ByRef)
 \
-#### Composition
+### Composition
 Creating new classes which use other classes as attributes.
 The football team class uses 11 instances of the football player class.
 ArsenalPlayer11.Name -> Mike
