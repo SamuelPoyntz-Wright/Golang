@@ -1,4 +1,4 @@
-Panos's implementation. This queries thw Star Wars API (SWAPI) (GET request). It then successfuly interrets the JSON responce  
+Panos's implementation. This queries thw Star Wars API (SWAPI) (GET request). It then successfuly interprets the JSON responce  
 (only making the key: value pairs, we're interested in availble).
 He used this lin (https://mholt.github.io/json-to-go/) to create the appropriate Go structures for the JSON responce.
 ```go
